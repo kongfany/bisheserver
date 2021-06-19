@@ -1,0 +1,20 @@
+Springboot+vue+ElementUI
+common:基础的配置代码
+    result：统一的返回数据的包装类
+        所有的接口会返回一个result对象，对所有的请求结果进行封装，返回三个属性code，msg，data
+        code告诉前台这次成功或失败，失败会把message放在msg属性中，返回给前台，前台拿到错误信息后，再提示给用户
+        data用于查询接口从后台查询数据，把用户的list放在data里，返回给前台
+    corsconfig：用于进行跨域处理的，用于部署在服务器上；放开跨域处理的限制
+    authlnterceptor：权限的拦截器，用户登录之后才有权限进行访问，对用户的信息进行判断
+    webmvcconfig：对拦截器的配置，默认拦截所有，但把后面这些请求放开，登录注册界面不能拦截，js、css资源文件不能拦截
+controller：接口
+dao：数据库访问层jpa
+entity：实体类与数据库表对应的
+exception：异常处理
+service：应用处理类
+util：代码生成工具---右键run codegenerator.main()自动生成
+resources：配置文件.yml和前台页面
+pom.xml:用于下载依赖
+//07:45使用方法
+19:11
+页面创建：20：59
